@@ -1,0 +1,37 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sample.dao.mapper.QuestionMapper">
+	<resultMap type="com.sample.web.domain.Question" id="question">
+						<result column="questionId" property="questionId"/>
+								<result column="questionText" property="questionText"/>
+								<result column="questionAnswer" property="questionAnswer"/>
+								<result column="visible" property="visible"/>
+					</resultMap>
+	
+	<select id="getAllQuestions" resultMap="question">
+		select * from question
+	</select>
+
+	<select id="getQuestion" resultMap="question">
+		select * from question where questionId = #{questionId}
+	</select>
+	
+	<update id="updateQuestion">
+		update question set 
+									questionId = #{question.questionId}
+												,questionText = #{question.questionText}
+												,questionAnswer = #{question.questionAnswer}
+												,visible = #{question.visible}
+								where questionId = #{question.questionId}
+	</update>
+	
+	<insert id="saveNewQuestion">
+		insert into Question
+			values(
+									#{question.questionId}
+												, #{question.questionText}
+												, #{question.questionAnswer}
+												, #{question.visible}
+									)
+		
+	</insert>
+</mapper>

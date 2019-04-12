@@ -1,0 +1,43 @@
+{
+	"name": "zz-web13",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"bootstrap": "^4.2.1",
+		"react": "^16.8.1",
+		"react-bootstrap": "^1.0.0-beta.4",
+		"react-dom": "^16.8.1",
+		"react-redux": "^6.0.0",
+		"react-router": "^4.3.1",
+		"react-router-dom": "^4.3.1",
+		"react-scripts": "2.1.4",
+		"redux": "^4.0.1",
+		"redux-thunk": "^2.3.0",
+		"react-test-renderer": "^16.8.1",
+		"enzyme": "^3.8.0",
+		"enzyme-adapter-react-16": "^1.8.0"
+	},
+    "devDependencies": {
+        "body-parser": "^1.18.3",
+        "concurrently": "^4.1.0",
+        "cors": "^2.8.5",
+        "json-query": "^2.2.2"
+    },
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test --env=jsdom",
+		"eject": "react-scripts eject",
+		"coverage": "react-scripts test --env=jsdom --coverage",
+		"startMock" : "node ./mocks/server.js",
+        "standalone": "concurrently \"yarn startMock\" \"yarn start\""
+	},
+	"proxy": "http://localhost:8000/zz-web13",
+	"eslintConfig":{"extends":"react-app"},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	]
+}
