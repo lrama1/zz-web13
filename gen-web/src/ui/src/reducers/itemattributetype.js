@@ -38,10 +38,22 @@ export const itemAttributeType = (state = initialItemAttributeType, action) => {
         return action.itemAttributeType
         
     }else if(action.type === ITEMATTRIBUTETYPE_EDIT){
-        return {
-        	...state,
-        	[action.name]: action.value
-        	}
+        let newState = {}
+        if(action.name[0].indexOf('.') == -1) {
+            newState = {
+                ...state,
+                [action.name]: action.value
+            }
+        }else{
+            const names = action.name[0].split(".");
+            newState = {
+                ...state
+            }
+            newState[names[0]][names[1]] = action.value;
+        }
+        console.log('Change', newState)
+        return newState;
+
     }else if(action.type === ITEMATTRIBUTETYPE_SAVE_SUCCESS){
         return action.itemAttributeType;
     }else if(action.type === ITEMATTRIBUTETYPE_SAVE_ERROR){

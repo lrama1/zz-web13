@@ -10,6 +10,11 @@ function ItemAttributeTypeEdit({selectedItemAttributeType, onEditItemAttributeTy
         event.preventDefault();
     }
 
+    const dataTypOptions = [
+        {label: 'String', value: 1},
+        {label: 'Number', value: 2}
+    ]
+
     return (
         <div>
             <form>
@@ -25,6 +30,15 @@ function ItemAttributeTypeEdit({selectedItemAttributeType, onEditItemAttributeTy
                            value={selectedItemAttributeType.itemAttrTypeCode}
                            onChange={onEditItemAttributeType}/>
                 </div>
+                <div className="form-group">
+                    <label htmlFor="itemAttrTypeDatatype">itemAttrTypeDatatype</label>
+                    {/*<input className="form-control" id="itemAttrTypeDatatype" name="itemAttrTypeDatatype.itemAttrTypeDatatypeCode"
+                           value={selectedItemAttributeType.itemAttrTypeDatatype.itemAttrTypeDatatypeCode}
+                           onChange={onEditItemAttributeType}/>*/}
+                           <Dropdown name="itemAttrTypeDatatype.itemAttrTypeDatatypeCode" value={selectedItemAttributeType.itemAttrTypeDatatype.itemAttrTypeDatatypeCode}
+                                     options={dataTypOptions} onChange={onEditItemAttributeType}/>
+                </div>
+
                 <div className="form-group">
                     <label htmlFor="itemAttrTypeName">itemAttrTypeName</label>
                     <input className="form-control" id="itemAttrTypeName" name="itemAttrTypeName"

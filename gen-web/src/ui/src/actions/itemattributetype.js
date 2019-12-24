@@ -36,7 +36,7 @@ export function fetchItemAttributeType(url, parentItemTypeId){
 }
 
 export const ITEMATTRIBUTETYPE_EDIT = 'ITEMATTRIBUTETYPE_EDIT';
-export function editItemAttributeType(name, value){    
+export function editItemAttributeType(name, value){
     return {
         type: ITEMATTRIBUTETYPE_EDIT,
         name,
@@ -64,7 +64,7 @@ export function saveItemAttributeType(url, itemAttributeType){
     return async dispatch => {
         try {
             let data = null;
-            itemAttributeType.itemAttrTypeDatatype = {itemAttrTypeDatatypeCode: 1}
+            //itemAttributeType.itemAttrTypeDatatype = {itemAttrTypeDatatypeCode: 1}
             if(itemAttributeType.itemAttrTypeId) {
                 data = await putRequest(url, itemAttributeType)
             }else{
