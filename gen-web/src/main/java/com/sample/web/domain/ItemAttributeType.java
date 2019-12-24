@@ -4,10 +4,15 @@ import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 
 /**
@@ -27,6 +32,8 @@ public class ItemAttributeType  implements java.io.Serializable {
      private String itemAttrTypeId;
      private ItemType itemTypeByItemAttrTypeLookupListId;
      private ItemAttrTypeDatatype itemAttrTypeDatatype;
+     
+     @JsonBackReference
      private ItemType itemTypeByItemTypeId;
      private String itemAttrTypeCode;
      private String itemAttrTypeName;
@@ -35,8 +42,6 @@ public class ItemAttributeType  implements java.io.Serializable {
      private Boolean itemAttrTypeIssearchable;
      private Byte itemAttrTypeDisplayIndex;
      private Boolean itemAttrTypeIsRequired;
-     private BigDecimal itemAttrTypeIsMetaphonekey;
-     private BigDecimal itemAttrTypeMetaphonekeypos;
 
 
     // Constructors
@@ -56,11 +61,10 @@ public class ItemAttributeType  implements java.io.Serializable {
         this.itemAttrTypeIssearchable = itemAttrTypeIssearchable;
         this.itemAttrTypeDisplayIndex = itemAttrTypeDisplayIndex;
         this.itemAttrTypeIsRequired = itemAttrTypeIsRequired;
-        this.itemAttrTypeIsMetaphonekey = itemAttrTypeIsMetaphonekey;
     }
     
     /** full constructor */
-    public ItemAttributeType(String itemAttrTypeId, ItemType itemTypeByItemAttrTypeLookupListId, ItemAttrTypeDatatype itemAttrTypeDatatype, ItemType itemTypeByItemTypeId, String itemAttrTypeCode, String itemAttrTypeName, String itemAttrTypeDesc, BigDecimal itemAttrTypeLength, Boolean itemAttrTypeIssearchable, Byte itemAttrTypeDisplayIndex, Boolean itemAttrTypeIsRequired, BigDecimal itemAttrTypeIsMetaphonekey, BigDecimal itemAttrTypeMetaphonekeypos) {
+    public ItemAttributeType(String itemAttrTypeId, ItemType itemTypeByItemAttrTypeLookupListId, ItemAttrTypeDatatype itemAttrTypeDatatype, ItemType itemTypeByItemTypeId, String itemAttrTypeCode, String itemAttrTypeName, String itemAttrTypeDesc, BigDecimal itemAttrTypeLength, Boolean itemAttrTypeIssearchable, Byte itemAttrTypeDisplayIndex, Boolean itemAttrTypeIsRequired) {
         this.itemAttrTypeId = itemAttrTypeId;
         this.itemTypeByItemAttrTypeLookupListId = itemTypeByItemAttrTypeLookupListId;
         this.itemAttrTypeDatatype = itemAttrTypeDatatype;
@@ -72,14 +76,14 @@ public class ItemAttributeType  implements java.io.Serializable {
         this.itemAttrTypeIssearchable = itemAttrTypeIssearchable;
         this.itemAttrTypeDisplayIndex = itemAttrTypeDisplayIndex;
         this.itemAttrTypeIsRequired = itemAttrTypeIsRequired;
-        this.itemAttrTypeIsMetaphonekey = itemAttrTypeIsMetaphonekey;
-        this.itemAttrTypeMetaphonekeypos = itemAttrTypeMetaphonekeypos;
     }
 
    
     // Property accessors
     @Id 
-    
+    @GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid",
+	  strategy = "uuid")
     @Column(name="ITEM_ATTR_TYPE_ID", unique=true, nullable=false, length=32)
 
     public String getItemAttrTypeId() {
@@ -99,7 +103,8 @@ public class ItemAttributeType  implements java.io.Serializable {
     public void setItemTypeByItemAttrTypeLookupListId(ItemType itemTypeByItemAttrTypeLookupListId) {
         this.itemTypeByItemAttrTypeLookupListId = itemTypeByItemAttrTypeLookupListId;
     }
-	@ManyToOne(fetch=FetchType.LAZY)
+    
+	@ManyToOne(fetch=FetchType.EAGER)
         @JoinColumn(name="ITEM_ATTR_TYPE_DATATYPE_CODE", nullable=false)
 
     public ItemAttrTypeDatatype getItemAttrTypeDatatype() {
@@ -109,9 +114,9 @@ public class ItemAttributeType  implements java.io.Serializable {
     public void setItemAttrTypeDatatype(ItemAttrTypeDatatype itemAttrTypeDatatype) {
         this.itemAttrTypeDatatype = itemAttrTypeDatatype;
     }
-	@ManyToOne(fetch=FetchType.LAZY)
+	
+    @ManyToOne(fetch=FetchType.LAZY)
         @JoinColumn(name="ITEM_TYPE_ID", nullable=false)
-
     public ItemType getItemTypeByItemTypeId() {
         return this.itemTypeByItemTypeId;
     }
@@ -188,34 +193,6 @@ public class ItemAttributeType  implements java.io.Serializable {
     
     public void setItemAttrTypeIsRequired(Boolean itemAttrTypeIsRequired) {
         this.itemAttrTypeIsRequired = itemAttrTypeIsRequired;
-    }
+    } 
     
-    @Column(name="ITEM_ATTR_TYPE_IS_METAPHONEKEY", nullable=false, precision=128, scale=0)
-
-    public BigDecimal getItemAttrTypeIsMetaphonekey() {
-        return this.itemAttrTypeIsMetaphonekey;
-    }
-    
-    public void setItemAttrTypeIsMetaphonekey(BigDecimal itemAttrTypeIsMetaphonekey) {
-        this.itemAttrTypeIsMetaphonekey = itemAttrTypeIsMetaphonekey;
-    }
-    
-    @Column(name="ITEM_ATTR_TYPE_METAPHONEKEYPOS", precision=128, scale=0)
-
-    public BigDecimal getItemAttrTypeMetaphonekeypos() {
-        return this.itemAttrTypeMetaphonekeypos;
-    }
-    
-    public void setItemAttrTypeMetaphonekeypos(BigDecimal itemAttrTypeMetaphonekeypos) {
-        this.itemAttrTypeMetaphonekeypos = itemAttrTypeMetaphonekeypos;
-    }
-   
-
-
-
-
-
-
-
-
 }

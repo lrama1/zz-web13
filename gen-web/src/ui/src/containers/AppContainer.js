@@ -2,6 +2,10 @@ import {fetchAllItems} from '../actions/item'
 
 import {connect} from "react-redux";
 import App from '../components/App'
+import {fetchAllItemTypes} from '../actions/itemtype'
+import {fetchAllItemAttributeTypes} from '../actions/itemattributetype'; 
+; 
+
 
 const mapStateToProps = (state) => {
     console.log(state);
@@ -11,7 +15,9 @@ const mapStateToProps = (state) => {
 };
 const mapDispatchToProps = (dispatch) => {
     return{
-        fetchAllItems: (url) => dispatch(fetchAllItems(url))
+        fetchAllItems: (url) => dispatch(fetchAllItems(url)),
+	    fetchAllItemTypes: (url) => dispatch(fetchAllItemTypes(url)),
+	    fetchAllItemAttributeTypes: (url) => dispatch(fetchAllItemAttributeTypes(url))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App)

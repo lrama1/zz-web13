@@ -1,0 +1,14 @@
+Sample-itemTypeId0,Sample-itemTypeName0
+Sample-itemTypeId1,Sample-itemTypeName1
+Sample-itemTypeId2,Sample-itemTypeName2
+Sample-itemTypeId3,Sample-itemTypeName3
+Sample-itemTypeId4,Sample-itemTypeName4
+Sample-itemTypeId5,Sample-itemTypeName5
+Sample-itemTypeId6,Sample-itemTypeName6
+Sample-itemTypeId7,Sample-itemTypeName7
+Sample-itemTypeId8,Sample-itemTypeName8
+Sample-itemTypeId9,Sample-itemTypeName9
+Sample-itemTypeId10,Sample-itemTypeName10
+Sample-itemTypeId11,Sample-itemTypeName11
+Sample-itemTypeId12,Sample-itemTypeName12
+Sample-itemTypeId13,Sample-itemTypeName13

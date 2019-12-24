@@ -1,0 +1,187 @@
+{
+  "rows": [
+        {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-0",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-0",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-0",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-0",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-0",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-0",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-0",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-0",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-0",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-0"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-1",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-1",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-1",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-1",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-1",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-1",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-1",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-1",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-1",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-1"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-2",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-2",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-2",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-2",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-2",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-2",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-2",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-2",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-2",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-2"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-3",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-3",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-3",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-3",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-3",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-3",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-3",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-3",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-3",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-3"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-4",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-4",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-4",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-4",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-4",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-4",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-4",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-4",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-4",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-4"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-5",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-5",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-5",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-5",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-5",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-5",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-5",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-5",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-5",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-5"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-6",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-6",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-6",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-6",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-6",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-6",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-6",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-6",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-6",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-6"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-7",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-7",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-7",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-7",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-7",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-7",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-7",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-7",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-7",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-7"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-8",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-8",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-8",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-8",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-8",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-8",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-8",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-8",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-8",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-8"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-9",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-9",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-9",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-9",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-9",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-9",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-9",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-9",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-9",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-9"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-10",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-10",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-10",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-10",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-10",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-10",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-10",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-10",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-10",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-10"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-11",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-11",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-11",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-11",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-11",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-11",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-11",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-11",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-11",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-11"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-12",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-12",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-12",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-12",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-12",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-12",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-12",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-12",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-12",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-12"
+                  }
+        ,
+            {
+                            "itemAttrTypeId": "Sample-itemAttrTypeId-13",
+                              "itemAttrTypeCode": "Sample-itemAttrTypeCode-13",
+                              "itemAttrTypeName": "Sample-itemAttrTypeName-13",
+                              "itemAttrTypeDesc": "Sample-itemAttrTypeDesc-13",
+                              "itemAttrTypeLength": "Sample-itemAttrTypeLength-13",
+                              "itemAttrTypeIsSearchable": "Sample-itemAttrTypeIsSearchable-13",
+                              "itemAttrTypeDisplayIndex": "Sample-itemAttrTypeDisplayIndex-13",
+                              "itemAttrTypeIsRequired": "Sample-itemAttrTypeIsRequired-13",
+                              "itemAttrTypeIsMetaphoneKey": "Sample-itemAttrTypeIsMetaphoneKey-13",
+                              "itemAttrTypeMetaphonekeypos": "Sample-itemAttrTypeMetaphonekeypos-13"
+                  }
+          ],
+  "totalRecords": 14,
+  "lastPage": 2
+}

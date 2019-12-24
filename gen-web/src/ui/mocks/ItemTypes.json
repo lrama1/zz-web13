@@ -1,0 +1,75 @@
+{
+  "rows": [
+        {
+                            "itemTypeId": "Sample-itemTypeId-0",
+                              "itemTypeName": "Sample-itemTypeName-0"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-1",
+                              "itemTypeName": "Sample-itemTypeName-1"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-2",
+                              "itemTypeName": "Sample-itemTypeName-2"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-3",
+                              "itemTypeName": "Sample-itemTypeName-3"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-4",
+                              "itemTypeName": "Sample-itemTypeName-4"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-5",
+                              "itemTypeName": "Sample-itemTypeName-5"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-6",
+                              "itemTypeName": "Sample-itemTypeName-6"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-7",
+                              "itemTypeName": "Sample-itemTypeName-7"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-8",
+                              "itemTypeName": "Sample-itemTypeName-8"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-9",
+                              "itemTypeName": "Sample-itemTypeName-9"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-10",
+                              "itemTypeName": "Sample-itemTypeName-10"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-11",
+                              "itemTypeName": "Sample-itemTypeName-11"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-12",
+                              "itemTypeName": "Sample-itemTypeName-12"
+                  }
+        ,
+            {
+                            "itemTypeId": "Sample-itemTypeId-13",
+                              "itemTypeName": "Sample-itemTypeName-13"
+                  }
+          ],
+  "totalRecords": 14,
+  "lastPage": 2
+}

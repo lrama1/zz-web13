@@ -6,10 +6,15 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 /**
  * ItemType entity. @author MyEclipse Persistence Tools
@@ -30,6 +35,8 @@ public class ItemType implements java.io.Serializable {
 	private Set<ItemRelationshipRuleBase> itemRelationshipRuleBasesForTargetItemTypeId = new HashSet<ItemRelationshipRuleBase>(
 			0);
 	private Set<ItemAttributeType> itemAttributeTypesForItemAttrTypeLookupListId = new HashSet<ItemAttributeType>(0);
+	
+	@JsonManagedReference
 	private Set<ItemAttributeType> itemAttributeTypesForItemTypeId = new HashSet<ItemAttributeType>(0);
 	private Set<Item> items = new HashSet<Item>(0);
 
@@ -64,8 +71,9 @@ public class ItemType implements java.io.Serializable {
 	}
 
 	// Property accessors
-	@Id
-
+	@Id @GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid",
+	  strategy = "uuid")
 	@Column(name = "ITEM_TYPE_ID", unique = true, nullable = false, length = 32)
 
 	public String getItemTypeId() {
@@ -138,7 +146,7 @@ public class ItemType implements java.io.Serializable {
 		this.itemAttributeTypesForItemAttrTypeLookupListId = itemAttributeTypesForItemAttrTypeLookupListId;
 	}
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "itemTypeByItemTypeId")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "itemTypeByItemTypeId")
 	public Set<ItemAttributeType> getItemAttributeTypesForItemTypeId() {
 		return this.itemAttributeTypesForItemTypeId;
 	}

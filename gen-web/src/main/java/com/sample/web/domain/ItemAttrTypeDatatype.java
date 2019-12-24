@@ -26,7 +26,7 @@ public class ItemAttrTypeDatatype  implements java.io.Serializable {
      private String itemAttrTypeDatatypeName;
      private String itemAttrTypeDatatypeDesc;
      private String regexPattern;
-     private Set<ItemAttributeType> itemAttributeTypes = new HashSet<ItemAttributeType>(0);
+     //private Set<ItemAttributeType> itemAttributeTypes = new HashSet<ItemAttributeType>(0);
 
 
     // Constructors
@@ -42,12 +42,12 @@ public class ItemAttrTypeDatatype  implements java.io.Serializable {
     }
     
     /** full constructor */
-    public ItemAttrTypeDatatype(Byte itemAttrTypeDatatypeCode, String itemAttrTypeDatatypeName, String itemAttrTypeDatatypeDesc, String regexPattern, Set<ItemAttributeType> itemAttributeTypes) {
+    public ItemAttrTypeDatatype(Byte itemAttrTypeDatatypeCode, String itemAttrTypeDatatypeName, String itemAttrTypeDatatypeDesc, String regexPattern/*, Set<ItemAttributeType> itemAttributeTypes*/) {
         this.itemAttrTypeDatatypeCode = itemAttrTypeDatatypeCode;
         this.itemAttrTypeDatatypeName = itemAttrTypeDatatypeName;
         this.itemAttrTypeDatatypeDesc = itemAttrTypeDatatypeDesc;
         this.regexPattern = regexPattern;
-        this.itemAttributeTypes = itemAttributeTypes;
+        //this.itemAttributeTypes = itemAttributeTypes;
     }
 
    
@@ -93,6 +93,7 @@ public class ItemAttrTypeDatatype  implements java.io.Serializable {
     public void setRegexPattern(String regexPattern) {
         this.regexPattern = regexPattern;
     }
+    /*
 @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="itemAttrTypeDatatype")
 
     public Set<ItemAttributeType> getItemAttributeTypes() {
@@ -102,12 +103,7 @@ public class ItemAttrTypeDatatype  implements java.io.Serializable {
     public void setItemAttributeTypes(Set<ItemAttributeType> itemAttributeTypes) {
         this.itemAttributeTypes = itemAttributeTypes;
     }
-   
-
-
-
-
-
+   */
 
 
 
