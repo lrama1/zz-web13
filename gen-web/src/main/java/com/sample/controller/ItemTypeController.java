@@ -50,14 +50,12 @@ public class ItemTypeController extends BaseController {
 
 	@RequestMapping(value = "/itemtype", headers = { "accept=application/json" }, method = RequestMethod.POST)
 	public ItemType saveNewItemType(@Valid @RequestBody ItemType itemType) {
-		itemTypeService.saveNewItemType(itemType);
-		return itemType;
+		return itemTypeService.saveNewItemType(itemType);
 	}
 
 	@RequestMapping(value = "/itemtype/{id}", headers = { "accept=application/json" }, method = RequestMethod.PUT)
 	public ItemType updateItemType(@Valid @RequestBody ItemType itemType) {
-		itemTypeService.saveItemType(itemType);
-		return itemType;
+		return itemTypeService.saveItemType(itemType);
 	}
 
 	@RequestMapping("/itemtypes")

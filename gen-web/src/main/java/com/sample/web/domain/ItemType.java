@@ -14,6 +14,7 @@ import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 /**
@@ -38,8 +39,10 @@ public class ItemType implements java.io.Serializable {
 	
 	@JsonManagedReference
 	private Set<ItemAttributeType> itemAttributeTypesForItemTypeId = new HashSet<ItemAttributeType>(0);
+	
+	/*@JsonBackReference
 	private Set<Item> items = new HashSet<Item>(0);
-
+*/
 	// Constructors
 
 	/** default constructor */
@@ -58,7 +61,7 @@ public class ItemType implements java.io.Serializable {
 			Set<ItemRelationshipRuleBase> itemRelationshipRuleBasesForSourceItemTypeId,
 			Set<ItemRelationshipRuleBase> itemRelationshipRuleBasesForTargetItemTypeId,
 			Set<ItemAttributeType> itemAttributeTypesForItemAttrTypeLookupListId,
-			Set<ItemAttributeType> itemAttributeTypesForItemTypeId, Set<Item> items) {
+			Set<ItemAttributeType> itemAttributeTypesForItemTypeId/*, Set<Item> items*/) {
 		this.itemTypeId = itemTypeId;
 		this.itemTypeCode = itemTypeCode;
 		this.itemTypeName = itemTypeName;
@@ -67,7 +70,7 @@ public class ItemType implements java.io.Serializable {
 		this.itemRelationshipRuleBasesForTargetItemTypeId = itemRelationshipRuleBasesForTargetItemTypeId;
 		this.itemAttributeTypesForItemAttrTypeLookupListId = itemAttributeTypesForItemAttrTypeLookupListId;
 		this.itemAttributeTypesForItemTypeId = itemAttributeTypesForItemTypeId;
-		this.items = items;
+		//this.items = items;
 	}
 
 	// Property accessors
@@ -155,6 +158,7 @@ public class ItemType implements java.io.Serializable {
 		this.itemAttributeTypesForItemTypeId = itemAttributeTypesForItemTypeId;
 	}
 
+	/*
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "itemType")
 	public Set<Item> getItems() {
 		return this.items;
@@ -162,6 +166,6 @@ public class ItemType implements java.io.Serializable {
 
 	public void setItems(Set<Item> items) {
 		this.items = items;
-	}
+	}*/
 
 }

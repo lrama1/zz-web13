@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import javax.validation.Valid;
 
+import com.sample.web.domain.ItemAttrTypeDatatype;
 //import the domain
 import com.sample.web.domain.ItemAttributeType;
 import com.sample.service.ItemAttributeTypeService;
@@ -42,6 +43,8 @@ public class ItemAttributeTypeController extends BaseController {
 			itemAttrTypeToReturn.setItemAttrTypeId("");
 			itemAttrTypeToReturn.setItemAttrTypeCode("");
 			itemAttrTypeToReturn.setItemAttrTypeName("");
+			ItemAttrTypeDatatype dataType = new ItemAttrTypeDatatype(null, "");
+			itemAttrTypeToReturn.setItemAttrTypeDatatype(dataType);
 			return itemAttrTypeToReturn;
 		}
 		else

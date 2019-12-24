@@ -11,6 +11,9 @@ import ItemTypeListContainer from '../containers/ItemTypeListContainer';
 import ItemTypeEditContainer from '../containers/ItemTypeEditContainer';
 import ItemAttributeTypeListContainer from '../containers/ItemAttributeTypeListContainer';
 import ItemAttributeTypeEditContainer from '../containers/ItemAttributeTypeEditContainer';
+import ItemAttrTypeDatatypeListContainer from '../containers/ItemAttrTypeDatatypeListContainer';
+import ItemAttrTypeDatatypeEditContainer from '../containers/ItemAttrTypeDatatypeEditContainer';
+
 
 
 
@@ -35,7 +38,8 @@ function App(props){
                                 <Link className="nav-link" to="/items" onClick={() => props.fetchAllItems('items?page=1&per_page=10')}>Items</Link>
                             </li>
 <li><Link  className="nav-link" to="/itemtypes"  onClick={() => props.fetchAllItemTypes('/itemtypes?page=1&per_page=10')} >ItemType</Link></li>
-<li><Link  className="nav-link" to="/itemattributetypes"  onClick={() => props.fetchAllItemAttributeTypes('/itemattributetypes?page=1&per_page=10')} >ItemAttributeType</Link></li>                            
+<li><Link  className="nav-link" to="/itemattributetypes"  onClick={() => props.fetchAllItemAttributeTypes('/itemattributetypes?page=1&per_page=10')} >ItemAttributeType</Link></li>
+<li><Link  className="nav-link" to="/itemattrtypedatatypes"  onClick={() => props.fetchAllItemAttrTypeDatatypes('/itemattrtypedatatypes?page=1&per_page=10')} >ItemAttrTypeDatatype</Link></li>                            
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
                             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
@@ -53,6 +57,8 @@ function App(props){
 <Route path="/itemtype" exact component={ItemTypeEditContainer}/>
 <Route path="/itemattributetypes" exact component={ItemAttributeTypeListContainer}/>
 <Route path="/itemattributetype" exact component={ItemAttributeTypeEditContainer}/>
+<Route path="/itemattrtypedatatypes" exact component={ItemAttrTypeDatatypeListContainer}/>
+<Route path="/itemattrtypedatatype" exact component={ItemAttrTypeDatatypeEditContainer}/>
                     </div>
                 </div>
             </div>

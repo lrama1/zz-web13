@@ -35,5 +35,13 @@ app.get('/gen-web/itemattributetype/:itemAttrTypeId', (req, res) =>{
     const returnVal = jsonQuery('rows[itemAttrTypeId=' + req.params.itemAttrTypeId + ']',{data: itemattributetypes})
     return res.json(returnVal.value)
 })
+const itemattrtypedatatypes = require('./ItemAttrTypeDatatypes.json')
+app.get('/gen-web/itemattrtypedatatypes', (req, res) =>{
+    return res.json(itemattrtypedatatypes)
+})
+app.get('/gen-web/itemattrtypedatatype/:itemAttrTypeDatatypeCode', (req, res) =>{
+    const returnVal = jsonQuery('rows[itemAttrTypeDatatypeCode=' + req.params.itemAttrTypeDatatypeCode + ']',{data: itemattrtypedatatypes})
+    return res.json(returnVal.value)
+})
 app.listen(8000)
 console.log('Listening on port 8000')

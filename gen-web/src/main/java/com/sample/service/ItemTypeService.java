@@ -36,11 +36,11 @@ public class ItemTypeService {
 		return itemTypeRepository.findOne(id);
 	}
 
-	public void saveNewItemType(ItemType itemType) {
-		itemTypeRepository.saveAndFlush(itemType);
+	public ItemType saveNewItemType(ItemType itemType) {
+		return itemTypeRepository.saveAndFlush(itemType);
 	}
 
-	public void saveItemType(ItemType itemType) {
-		itemTypeRepository.saveAndFlush(itemType);
+	public ItemType saveItemType(ItemType itemType) {
+		return itemTypeRepository.saveAndFlush(itemType);
 	}
 }

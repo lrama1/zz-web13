@@ -13,6 +13,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 /**
  * Item entity. @author MyEclipse Persistence Tools
  */
@@ -25,6 +27,8 @@ public class Item implements java.io.Serializable {
 	// Fields
 
 	private String itemId;
+	
+	//@JsonManagedReference
 	private ItemType itemType;
 	private String itemCode;
 	private String itemName;
@@ -78,7 +82,7 @@ public class Item implements java.io.Serializable {
 		this.itemId = itemId;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "ITEM_TYPE_ID", nullable = false)
 
 	public ItemType getItemType() {

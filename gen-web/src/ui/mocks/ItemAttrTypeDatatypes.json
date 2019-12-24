@@ -1,0 +1,103 @@
+{
+  "rows": [
+        {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-0",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-0",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-0",
+                              "regexPattern": "Sample-regexPattern-0"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-1",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-1",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-1",
+                              "regexPattern": "Sample-regexPattern-1"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-2",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-2",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-2",
+                              "regexPattern": "Sample-regexPattern-2"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-3",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-3",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-3",
+                              "regexPattern": "Sample-regexPattern-3"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-4",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-4",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-4",
+                              "regexPattern": "Sample-regexPattern-4"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-5",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-5",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-5",
+                              "regexPattern": "Sample-regexPattern-5"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-6",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-6",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-6",
+                              "regexPattern": "Sample-regexPattern-6"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-7",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-7",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-7",
+                              "regexPattern": "Sample-regexPattern-7"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-8",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-8",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-8",
+                              "regexPattern": "Sample-regexPattern-8"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-9",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-9",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-9",
+                              "regexPattern": "Sample-regexPattern-9"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-10",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-10",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-10",
+                              "regexPattern": "Sample-regexPattern-10"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-11",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-11",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-11",
+                              "regexPattern": "Sample-regexPattern-11"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-12",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-12",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-12",
+                              "regexPattern": "Sample-regexPattern-12"
+                  }
+        ,
+            {
+                            "itemAttrTypeDatatypeCode": "Sample-itemAttrTypeDatatypeCode-13",
+                              "itemAttrTypeDatatypeName": "Sample-itemAttrTypeDatatypeName-13",
+                              "itemAttrTypeDatatypeDesc": "Sample-itemAttrTypeDatatypeDesc-13",
+                              "regexPattern": "Sample-regexPattern-13"
+                  }
+          ],
+  "totalRecords": 14,
+  "lastPage": 2
+}
