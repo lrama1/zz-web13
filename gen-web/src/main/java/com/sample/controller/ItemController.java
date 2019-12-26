@@ -13,6 +13,7 @@ import javax.validation.Valid;
 
 //import the domain
 import com.sample.web.domain.Item;
+import com.sample.web.domain.ItemType;
 import com.sample.service.ItemService;
 import com.sample.common.ListWrapper;
 import com.sample.common.NameValuePair;
@@ -22,6 +23,7 @@ import org.springframework.context.MessageSource;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 
 @RestController
 public class ItemController extends BaseController {
@@ -37,8 +39,16 @@ public class ItemController extends BaseController {
 	public Item getItem(@PathVariable("id") String id, Principal principal) {
 		Authentication authenticationToken = (Authentication) principal;
 		Item item = itemService.getItem(id);
-		if (item == null)
-			return new Item();
+		if (item == null) {
+			Item itemToReturn =  new Item();
+			itemToReturn.setItemId("");
+			itemToReturn.setItemCode("");
+			itemToReturn.setItemName("");
+			itemToReturn.setItemDesc("");
+			itemToReturn.setItemType(new ItemType());
+			itemToReturn.setItemAttributes(new LinkedHashSet<>());
+			return itemToReturn;
+		}
 		else
 			return item;
 	}

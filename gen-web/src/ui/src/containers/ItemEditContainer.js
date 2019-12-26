@@ -5,7 +5,8 @@ import ItemEdit from '../components/ItemEdit';
 export const mapStateToProps = (state) => {
     console.log(state);
     return {
-        selectedItem: state.item
+        selectedItem: state.item,
+        itemTypes: state.itemTypes
     };
 };
 

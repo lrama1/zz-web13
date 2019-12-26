@@ -9,6 +9,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 
 /**
  * ItemAttribute entity. @author MyEclipse Persistence Tools
@@ -26,7 +28,10 @@ public class ItemAttribute  implements java.io.Serializable {
     // Fields    
 
      private String itemAttrId;
+     
+     @JsonBackReference
      private Item item;
+     
      private String itemAttrValue;
      private String itemAttrTypeId;
 

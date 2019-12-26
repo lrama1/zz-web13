@@ -3,7 +3,7 @@ Refactor opportunities
 1.  create separate files for each logical group of action creators
 2.  combine the separate action creator files here an export them
  */
-import {getRequest, putRequest} from "../utils/authority";
+import {getRequest, postRequest, putRequest} from "../utils/authority";
 
 export const ITEM_FETCH_SUCCESS = 'ITEM_FETCH_SUCCESS';
 export function itemFetchSuccess(item){
@@ -62,7 +62,12 @@ export function saveItemError(error){
 export function saveItem(url, item){
     return async dispatch => {
         try {
-            const data = await putRequest(url, item)
+            let data = null;
+            if(item.itemId) {
+                data = await putRequest(url, item)
+            }else{
+                data = await postRequest(url, item)
+            }
             dispatch(saveItemSuccess(data))
         }catch (e){
             alert(JSON.stringify(e))

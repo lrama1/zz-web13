@@ -20,9 +20,13 @@ export const items = (state = initialItems, action) => {
 }
 
 const initialItem = {
-        itemId: ''    
-            ,itemCode: ''    
-            ,itemName: ''    
+        itemId: ''
+        ,itemCode: ''
+        ,itemName: ''
+        ,itemType: {
+            itemAttributeTypesForItemTypeId : []
+        }
+
     }
 
 export const item = (state = initialItem, action) => {
@@ -30,10 +34,22 @@ export const item = (state = initialItem, action) => {
         return action.item
         
     }else if(action.type === ITEM_EDIT){
-        return {
-        	...state,
-        	[action.name]: action.value
-        	}
+        let newState = {}
+        if(action.name[0].indexOf('.') == -1) {
+            newState = {
+                ...state,
+                [action.name]: action.value
+            }
+        }else{
+            const names = action.name[0].split(".");
+            newState = {
+                ...state
+            }
+            newState[names[0]][names[1]] = action.value;
+        }
+        console.log('Change', newState)
+        return newState;
+
     }else if(action.type === ITEM_SAVE_SUCCESS){
         return action.item;
     }else if(action.type === ITEM_SAVE_ERROR){

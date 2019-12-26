@@ -59,8 +59,8 @@ public class ItemTypeController extends BaseController {
 	}
 
 	@RequestMapping("/itemtypes")
-	public ListWrapper<ItemType> getAllItemTypes(@RequestParam("page") int pageNumber,
-			@RequestParam("per_page") int pageSize,
+	public ListWrapper<ItemType> getAllItemTypes(@RequestParam(value = "page", defaultValue = "1") int pageNumber,
+			@RequestParam(value = "per_page", defaultValue = "1000") int pageSize,
 			@RequestParam(value = "sort_by", required = false) String sortByAttributeName,
 			@RequestParam(value = "order", required = false) String sortDirection) {
 		return itemTypeService.getItemTypes(pageNumber, pageSize, sortByAttributeName, sortDirection);
