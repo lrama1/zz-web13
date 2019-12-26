@@ -4,7 +4,7 @@ import {Dropdown} from 'primereact/dropdown';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-function ItemEdit({selectedItem, onEditItem, onSaveItem, itemTypes}) {
+function ItemEdit({history, selectedItem, onEditItem, onSaveItem, itemTypes, fetchItemAttribute}) {
 
     function buttonEventHandler(event) {
         onSaveItem('item/' + selectedItem.itemId,
@@ -27,6 +27,25 @@ function ItemEdit({selectedItem, onEditItem, onSaveItem, itemTypes}) {
                 return selectedItem.itemAttributes[index].itemAttrValue;
             }
         }
+        return "";
+    }
+
+    function getAttributeId(itemAttrTypeId){
+        //console.log('Lookking for ', itemAttrTypeId, selectedItem.itemAttributes)
+        for(let index = 0; index < selectedItem.itemAttributes.length; index++){
+            console.log(selectedItem.itemAttributes[index].itemAttrTypeId, itemAttrTypeId)
+            if(selectedItem.itemAttributes[index].itemAttrTypeId === itemAttrTypeId){
+                return selectedItem.itemAttributes[index].itemAttrId;
+            }
+        }
+        return "-1";
+    }
+
+
+    function editItemAttribute(itemAttributeId, itemAttrTypeId, itemId){
+        //alert(itemAttributeId);
+        fetchItemAttribute('itemattribute/' + itemAttributeId + "/" + itemAttrTypeId + "/" + itemId)
+        history.push({pathname: '/itemattribute'});
     }
 
     const itemAttributeRows = selectedItem.itemType.itemAttributeTypesForItemTypeId.map( (attribute, index) => {
@@ -38,7 +57,7 @@ function ItemEdit({selectedItem, onEditItem, onSaveItem, itemTypes}) {
                            readOnly={true}/>
                 </Col>
                 <Col>
-                    <button>Edit</button>
+                    <button onClick={()=> editItemAttribute(getAttributeId(attribute.itemAttrTypeId), attribute.itemAttrTypeId, selectedItem.itemId)}>Edit</button>
                 </Col>
             </Row>
         )

@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import {editItem, saveItem} from '../actions/item';
 import ItemEdit from '../components/ItemEdit';
+import {fetchItemAttribute} from "../actions/itemattribute";
 
 export const mapStateToProps = (state) => {
     console.log(state);
@@ -18,6 +19,9 @@ export const mapDispatchToProps = (dispatch) => {
         },
         onSaveItem(url, item){
             dispatch(saveItem(url, item))
+        },
+        fetchItemAttribute(url){
+            dispatch(fetchItemAttribute(url))
         }
     }
 }

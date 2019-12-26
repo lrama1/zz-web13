@@ -16,7 +16,9 @@ import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 /**
  * Item entity. @author MyEclipse Persistence Tools
@@ -24,6 +26,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Entity
 @Table(name = "ITEM", schema = "PUBLIC", catalog = "PUBLIC", uniqueConstraints = @UniqueConstraint(columnNames = {
 		"ITEM_TYPE_ID", "ITEM_ID" }))
+@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 
 public class Item implements java.io.Serializable {
 
@@ -31,7 +34,6 @@ public class Item implements java.io.Serializable {
 
 	private String itemId;
 	
-	//@JsonManagedReference
 	private ItemType itemType;
 	private String itemCode;
 	private String itemName;
@@ -39,7 +41,7 @@ public class Item implements java.io.Serializable {
 	private String itemMetaphoneSrcString;
 	private String itemMetaphoneKey;
 	
-	@JsonManagedReference
+	//@JsonManagedReference
 	private Set<ItemAttribute> itemAttributes = new HashSet<ItemAttribute>(0);
 	private Set<RelationshipMapping> relationshipMappingsForSourceItemId = new HashSet<RelationshipMapping>(0);
 	private Set<RelationshipMapping> relationshipMappingsForTargetItemId = new HashSet<RelationshipMapping>(0);

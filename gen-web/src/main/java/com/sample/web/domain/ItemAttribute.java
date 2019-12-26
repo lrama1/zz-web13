@@ -3,13 +3,18 @@ package com.sample.web.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.hibernate.annotations.GenericGenerator;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 
 /**
@@ -21,6 +26,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
     ,catalog="PUBLIC"
 , uniqueConstraints = @UniqueConstraint(columnNames={"ITEM_ID", "ITEM_ATTR_ID", "ITEM_ATTR_TYPE_ID"})
 )
+@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 
 public class ItemAttribute  implements java.io.Serializable {
 
@@ -29,7 +35,7 @@ public class ItemAttribute  implements java.io.Serializable {
 
      private String itemAttrId;
      
-     @JsonBackReference
+     //@JsonBackReference
      private Item item;
      
      private String itemAttrValue;
@@ -59,8 +65,9 @@ public class ItemAttribute  implements java.io.Serializable {
 
    
     // Property accessors
-    @Id 
-    
+    @Id     
+    @GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name="ITEM_ATTR_ID", unique=true, nullable=false, length=32)
 
     public String getItemAttrId() {
@@ -70,9 +77,9 @@ public class ItemAttribute  implements java.io.Serializable {
     public void setItemAttrId(String itemAttrId) {
         this.itemAttrId = itemAttrId;
     }
-	@ManyToOne(fetch=FetchType.LAZY)
+    
+	@ManyToOne(fetch=FetchType.EAGER)
         @JoinColumn(name="ITEM_ID", nullable=false)
-
     public Item getItem() {
         return this.item;
     }
@@ -100,13 +107,4 @@ public class ItemAttribute  implements java.io.Serializable {
     public void setItemAttrTypeId(String itemAttrTypeId) {
         this.itemAttrTypeId = itemAttrTypeId;
     }
-   
-
-
-
-
-
-
-
-
 }

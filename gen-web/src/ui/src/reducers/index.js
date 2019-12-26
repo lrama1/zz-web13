@@ -3,6 +3,7 @@ import { items, item } from './item';
 import { itemTypes, itemType } from './itemtype';
 import { itemAttributeTypes, itemAttributeType } from './itemattributetype';
 import { itemAttrTypeDatatypes, itemAttrTypeDatatype } from './itemattrtypedatatype';
+import { itemAttributes, itemAttribute } from './itemattribute';
 
 /*
 By combining reducers, you now have to use the namespace of the reducer
@@ -16,7 +17,9 @@ export default combineReducers({
     itemAttributeType,
     itemAttributeTypes,
     itemAttrTypeDatatype,
-    itemAttrTypeDatatypes
+    itemAttrTypeDatatypes,
+    itemAttribute,
+    itemAttributes
 });
 
  
