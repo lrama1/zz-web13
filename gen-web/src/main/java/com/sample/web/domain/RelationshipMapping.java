@@ -62,9 +62,8 @@ public class RelationshipMapping  implements java.io.Serializable {
     public void setId(RelationshipMappingId id) {
         this.id = id;
     }
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
         @JoinColumn(name="REL_ID", nullable=false, insertable=false, updatable=false)
-
     public Relationship getRelationship() {
         return this.relationship;
     }
@@ -72,7 +71,7 @@ public class RelationshipMapping  implements java.io.Serializable {
     public void setRelationship(Relationship relationship) {
         this.relationship = relationship;
     }
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
         @JoinColumn(name="TARGET_ITEM_ID", nullable=false, insertable=false, updatable=false)
 
     public Item getItemByTargetItemId() {
@@ -82,7 +81,8 @@ public class RelationshipMapping  implements java.io.Serializable {
     public void setItemByTargetItemId(Item itemByTargetItemId) {
         this.itemByTargetItemId = itemByTargetItemId;
     }
-	@ManyToOne(fetch=FetchType.LAZY)
+    
+	@ManyToOne(fetch=FetchType.EAGER)
         @JoinColumn(name="SOURCE_ITEM_ID", nullable=false, insertable=false, updatable=false)
 
     public Item getItemBySourceItemId() {
@@ -92,13 +92,5 @@ public class RelationshipMapping  implements java.io.Serializable {
     public void setItemBySourceItemId(Item itemBySourceItemId) {
         this.itemBySourceItemId = itemBySourceItemId;
     }
-   
-
-
-
-
-
-
-
 
 }

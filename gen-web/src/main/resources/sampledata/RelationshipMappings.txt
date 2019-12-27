@@ -1,0 +1,14 @@
+Sample-relId0,Sample-sourceItemId0,Sample-targetItemId0
+Sample-relId1,Sample-sourceItemId1,Sample-targetItemId1
+Sample-relId2,Sample-sourceItemId2,Sample-targetItemId2
+Sample-relId3,Sample-sourceItemId3,Sample-targetItemId3
+Sample-relId4,Sample-sourceItemId4,Sample-targetItemId4
+Sample-relId5,Sample-sourceItemId5,Sample-targetItemId5
+Sample-relId6,Sample-sourceItemId6,Sample-targetItemId6
+Sample-relId7,Sample-sourceItemId7,Sample-targetItemId7
+Sample-relId8,Sample-sourceItemId8,Sample-targetItemId8
+Sample-relId9,Sample-sourceItemId9,Sample-targetItemId9
+Sample-relId10,Sample-sourceItemId10,Sample-targetItemId10
+Sample-relId11,Sample-sourceItemId11,Sample-targetItemId11
+Sample-relId12,Sample-sourceItemId12,Sample-targetItemId12
+Sample-relId13,Sample-sourceItemId13,Sample-targetItemId13

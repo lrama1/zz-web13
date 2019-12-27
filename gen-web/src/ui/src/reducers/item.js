@@ -26,6 +26,7 @@ const initialItem = {
         ,itemType: {
             itemAttributeTypesForItemTypeId : []
         }
+        ,relationshipMappingsForSourceItemId: []
 
     }
 

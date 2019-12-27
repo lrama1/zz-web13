@@ -1,6 +1,7 @@
 package com.sample.web.domain;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -43,8 +44,10 @@ public class Item implements java.io.Serializable {
 	
 	//@JsonManagedReference
 	private Set<ItemAttribute> itemAttributes = new HashSet<ItemAttribute>(0);
+	
 	private Set<RelationshipMapping> relationshipMappingsForSourceItemId = new HashSet<RelationshipMapping>(0);
-	private Set<RelationshipMapping> relationshipMappingsForTargetItemId = new HashSet<RelationshipMapping>(0);
+	//private Set<RelationshipMapping> relationshipMappingsForTargetItemId = new HashSet<RelationshipMapping>(0);
+	
 
 	// Constructors
 
@@ -62,8 +65,8 @@ public class Item implements java.io.Serializable {
 	/** full constructor */
 	public Item(String itemId, ItemType itemType, String itemCode, String itemName, String itemDesc,
 			String itemMetaphoneSrcString, String itemMetaphoneKey, Set<ItemAttribute> itemAttributes,
-			Set<RelationshipMapping> relationshipMappingsForSourceItemId,
-			Set<RelationshipMapping> relationshipMappingsForTargetItemId) {
+			Set<RelationshipMapping> relationshipMappingsForSourceItemId/*,
+			Set<RelationshipMapping> relationshipMappingsForTargetItemId*/) {
 		this.itemId = itemId;
 		this.itemType = itemType;
 		this.itemCode = itemCode;
@@ -73,7 +76,7 @@ public class Item implements java.io.Serializable {
 		this.itemMetaphoneKey = itemMetaphoneKey;
 		this.itemAttributes = itemAttributes;
 		this.relationshipMappingsForSourceItemId = relationshipMappingsForSourceItemId;
-		this.relationshipMappingsForTargetItemId = relationshipMappingsForTargetItemId;
+		//this.relationshipMappingsForTargetItemId = relationshipMappingsForTargetItemId;
 	}
 
 	// Property accessors
@@ -89,6 +92,7 @@ public class Item implements java.io.Serializable {
 	public void setItemId(String itemId) {
 		this.itemId = itemId;
 	}
+	
 
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "ITEM_TYPE_ID", nullable = false)
@@ -160,8 +164,7 @@ public class Item implements java.io.Serializable {
 		this.itemAttributes = itemAttributes;
 	}
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "itemBySourceItemId")
-
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "itemBySourceItemId")
 	public Set<RelationshipMapping> getRelationshipMappingsForSourceItemId() {
 		return this.relationshipMappingsForSourceItemId;
 	}
@@ -170,14 +173,13 @@ public class Item implements java.io.Serializable {
 		this.relationshipMappingsForSourceItemId = relationshipMappingsForSourceItemId;
 	}
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "itemByTargetItemId")
-
+	/*@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "itemByTargetItemId")
 	public Set<RelationshipMapping> getRelationshipMappingsForTargetItemId() {
 		return this.relationshipMappingsForTargetItemId;
 	}
 
 	public void setRelationshipMappingsForTargetItemId(Set<RelationshipMapping> relationshipMappingsForTargetItemId) {
 		this.relationshipMappingsForTargetItemId = relationshipMappingsForTargetItemId;
-	}
+	}*/
 
 }

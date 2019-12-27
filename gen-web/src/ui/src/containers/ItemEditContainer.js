@@ -2,6 +2,7 @@ import {connect} from 'react-redux';
 import {editItem, saveItem} from '../actions/item';
 import ItemEdit from '../components/ItemEdit';
 import {fetchItemAttribute} from "../actions/itemattribute";
+import {fetchRelationshipMapping} from "../actions/relationshipmapping";
 
 export const mapStateToProps = (state) => {
     console.log(state);
@@ -22,6 +23,9 @@ export const mapDispatchToProps = (dispatch) => {
         },
         fetchItemAttribute(url){
             dispatch(fetchItemAttribute(url))
+        },
+        fetchRelationshipMapping(url){
+            dispatch(fetchRelationshipMapping(url))
         }
     }
 }

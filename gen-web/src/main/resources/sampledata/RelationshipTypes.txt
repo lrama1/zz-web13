@@ -1,0 +1,14 @@
+Sample-relTypeId0,Sample-relTypeCode0,Sample-relTypeName0,Sample-relTypeDesc0
+Sample-relTypeId1,Sample-relTypeCode1,Sample-relTypeName1,Sample-relTypeDesc1
+Sample-relTypeId2,Sample-relTypeCode2,Sample-relTypeName2,Sample-relTypeDesc2
+Sample-relTypeId3,Sample-relTypeCode3,Sample-relTypeName3,Sample-relTypeDesc3
+Sample-relTypeId4,Sample-relTypeCode4,Sample-relTypeName4,Sample-relTypeDesc4
+Sample-relTypeId5,Sample-relTypeCode5,Sample-relTypeName5,Sample-relTypeDesc5
+Sample-relTypeId6,Sample-relTypeCode6,Sample-relTypeName6,Sample-relTypeDesc6
+Sample-relTypeId7,Sample-relTypeCode7,Sample-relTypeName7,Sample-relTypeDesc7
+Sample-relTypeId8,Sample-relTypeCode8,Sample-relTypeName8,Sample-relTypeDesc8
+Sample-relTypeId9,Sample-relTypeCode9,Sample-relTypeName9,Sample-relTypeDesc9
+Sample-relTypeId10,Sample-relTypeCode10,Sample-relTypeName10,Sample-relTypeDesc10
+Sample-relTypeId11,Sample-relTypeCode11,Sample-relTypeName11,Sample-relTypeDesc11
+Sample-relTypeId12,Sample-relTypeCode12,Sample-relTypeName12,Sample-relTypeDesc12
+Sample-relTypeId13,Sample-relTypeCode13,Sample-relTypeName13,Sample-relTypeDesc13

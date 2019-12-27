@@ -15,6 +15,15 @@ import ItemAttrTypeDatatypeListContainer from '../containers/ItemAttrTypeDatatyp
 import ItemAttrTypeDatatypeEditContainer from '../containers/ItemAttrTypeDatatypeEditContainer';
 import ItemAttributeListContainer from '../containers/ItemAttributeListContainer';
 import ItemAttributeEditContainer from '../containers/ItemAttributeEditContainer';
+import RelationshipTypeListContainer from '../containers/RelationshipTypeListContainer';
+import RelationshipTypeEditContainer from '../containers/RelationshipTypeEditContainer';
+import RelationshipListContainer from '../containers/RelationshipListContainer';
+import RelationshipEditContainer from '../containers/RelationshipEditContainer';
+import RelationshipMappingListContainer from '../containers/RelationshipMappingListContainer';
+import RelationshipMappingEditContainer from '../containers/RelationshipMappingEditContainer';
+
+
+
 
 
 function App(props) {
@@ -45,6 +54,9 @@ function App(props) {
                             <li><Link className="nav-link" to="/itemattrtypedatatypes"
                                       onClick={() => props.fetchAllItemAttrTypeDatatypes('/itemattrtypedatatypes?page=1&per_page=10')}>ItemAttrTypeDatatype</Link>
                             </li>
+<li><Link  className="nav-link" to="/relationshiptypes"  onClick={() => props.fetchAllRelationshipTypes('/relationshiptypes?page=1&per_page=10')} >RelationshipType</Link></li>
+<li><Link  className="nav-link" to="/relationships"  onClick={() => props.fetchAllRelationships('/relationships?page=1&per_page=10')} >Relationship</Link></li>
+<li><Link  className="nav-link" to="/relationshipmappings"  onClick={() => props.fetchAllRelationshipMappings('/relationshipmappings?page=1&per_page=10')} >RelationshipMapping</Link></li>
                            
                         </ul>
                         <form className="form-inline my-2 my-lg-0">
@@ -68,6 +80,12 @@ function App(props) {
                         <Route path="/itemattrtypedatatype" exact component={ItemAttrTypeDatatypeEditContainer}/>
                         <Route path="/itemattributes" exact component={ItemAttributeListContainer}/>
                         <Route path="/itemattribute" exact component={ItemAttributeEditContainer}/>
+<Route path="/relationshiptypes" exact component={RelationshipTypeListContainer}/>
+<Route path="/relationshiptype" exact component={RelationshipTypeEditContainer}/>
+<Route path="/relationships" exact component={RelationshipListContainer}/>
+<Route path="/relationship" exact component={RelationshipEditContainer}/>
+<Route path="/relationshipmappings" exact component={RelationshipMappingListContainer}/>
+<Route path="/relationshipmapping" exact component={RelationshipMappingEditContainer}/>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 package com.sample.service;
 
+import java.util.LinkedHashSet;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
@@ -22,12 +24,18 @@ public class ItemService {
 
 		PageRequest request = new PageRequest(pageNumber - 1, pageSize);
 		Page<Item> itemPage = itemRepository.findAll(request);
+		//remove relationship mappings so it does not interfere with Jackson
+		for(Item item: itemPage.getContent()) {
+			item.setRelationshipMappingsForSourceItemId(new LinkedHashSet<>());
+		}
+		
 		ListWrapper<Item> results = new ListWrapper<>();
 		results.setRows(itemPage.getContent());
 		results.setTotalRecords(new Long(itemPage.getTotalElements()).intValue());
 		results.setCurrentPage(pageNumber - 1);
 		results.setSortedIndicator(new SortedIndicator(sortByAttribute, sortDirection));
 		return results;
+		
 
 	}
 

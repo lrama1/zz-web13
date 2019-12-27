@@ -24,3 +24,5 @@ Insert into ITEM_ATTR_TYPE_DATATYPE
    (6, 'Image', 'Image');
 COMMIT;
 */
+
+

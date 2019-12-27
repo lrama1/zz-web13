@@ -6,11 +6,17 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 
 /**
@@ -21,7 +27,7 @@ import javax.persistence.Table;
     ,schema="PUBLIC"
     ,catalog="PUBLIC"
 )
-
+//@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 public class Relationship  implements java.io.Serializable {
 
 
@@ -32,7 +38,7 @@ public class Relationship  implements java.io.Serializable {
      private String relName;
      private String relDesc;
      private Set<RelationshipAttribute> relationshipAttributes = new HashSet<RelationshipAttribute>(0);
-     private Set<RelationshipMapping> relationshipMappings = new HashSet<RelationshipMapping>(0);
+     //private Set<RelationshipMapping> relationshipMappings = new HashSet<RelationshipMapping>(0);
 
 
     // Constructors
@@ -49,19 +55,21 @@ public class Relationship  implements java.io.Serializable {
     }
     
     /** full constructor */
-    public Relationship(String relId, RelationshipType relationshipType, String relName, String relDesc, Set<RelationshipAttribute> relationshipAttributes, Set<RelationshipMapping> relationshipMappings) {
+    public Relationship(String relId, RelationshipType relationshipType, String relName, String relDesc, 
+    		Set<RelationshipAttribute> relationshipAttributes /*, Set<RelationshipMapping> relationshipMappings*/) {
         this.relId = relId;
         this.relationshipType = relationshipType;
         this.relName = relName;
         this.relDesc = relDesc;
         this.relationshipAttributes = relationshipAttributes;
-        this.relationshipMappings = relationshipMappings;
+        //this.relationshipMappings = relationshipMappings;
     }
 
    
     // Property accessors
     @Id 
-    
+    @GeneratedValue(generator="system-uuid")
+	@GenericGenerator(name="system-uuid", strategy = "uuid")
     @Column(name="REL_ID", unique=true, nullable=false, length=32)
 
     public String getRelId() {
@@ -71,7 +79,7 @@ public class Relationship  implements java.io.Serializable {
     public void setRelId(String relId) {
         this.relId = relId;
     }
-	@ManyToOne(fetch=FetchType.LAZY)
+	@ManyToOne(fetch=FetchType.EAGER)
         @JoinColumn(name="REL_TYPE_ID", nullable=false)
 
     public RelationshipType getRelationshipType() {
@@ -110,8 +118,9 @@ public class Relationship  implements java.io.Serializable {
     public void setRelationshipAttributes(Set<RelationshipAttribute> relationshipAttributes) {
         this.relationshipAttributes = relationshipAttributes;
     }
-@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="relationship")
-
+    
+    /*
+    @OneToMany(cascade=CascadeType.ALL, fetch=FetchType.LAZY, mappedBy="relationship")
     public Set<RelationshipMapping> getRelationshipMappings() {
         return this.relationshipMappings;
     }
@@ -119,7 +128,7 @@ public class Relationship  implements java.io.Serializable {
     public void setRelationshipMappings(Set<RelationshipMapping> relationshipMappings) {
         this.relationshipMappings = relationshipMappings;
     }
-   
+   */
 
 
 

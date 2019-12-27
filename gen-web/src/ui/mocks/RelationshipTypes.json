@@ -1,0 +1,103 @@
+{
+  "rows": [
+        {
+                            "relTypeId": "Sample-relTypeId-0",
+                              "relTypeCode": "Sample-relTypeCode-0",
+                              "relTypeName": "Sample-relTypeName-0",
+                              "relTypeDesc": "Sample-relTypeDesc-0"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-1",
+                              "relTypeCode": "Sample-relTypeCode-1",
+                              "relTypeName": "Sample-relTypeName-1",
+                              "relTypeDesc": "Sample-relTypeDesc-1"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-2",
+                              "relTypeCode": "Sample-relTypeCode-2",
+                              "relTypeName": "Sample-relTypeName-2",
+                              "relTypeDesc": "Sample-relTypeDesc-2"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-3",
+                              "relTypeCode": "Sample-relTypeCode-3",
+                              "relTypeName": "Sample-relTypeName-3",
+                              "relTypeDesc": "Sample-relTypeDesc-3"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-4",
+                              "relTypeCode": "Sample-relTypeCode-4",
+                              "relTypeName": "Sample-relTypeName-4",
+                              "relTypeDesc": "Sample-relTypeDesc-4"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-5",
+                              "relTypeCode": "Sample-relTypeCode-5",
+                              "relTypeName": "Sample-relTypeName-5",
+                              "relTypeDesc": "Sample-relTypeDesc-5"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-6",
+                              "relTypeCode": "Sample-relTypeCode-6",
+                              "relTypeName": "Sample-relTypeName-6",
+                              "relTypeDesc": "Sample-relTypeDesc-6"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-7",
+                              "relTypeCode": "Sample-relTypeCode-7",
+                              "relTypeName": "Sample-relTypeName-7",
+                              "relTypeDesc": "Sample-relTypeDesc-7"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-8",
+                              "relTypeCode": "Sample-relTypeCode-8",
+                              "relTypeName": "Sample-relTypeName-8",
+                              "relTypeDesc": "Sample-relTypeDesc-8"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-9",
+                              "relTypeCode": "Sample-relTypeCode-9",
+                              "relTypeName": "Sample-relTypeName-9",
+                              "relTypeDesc": "Sample-relTypeDesc-9"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-10",
+                              "relTypeCode": "Sample-relTypeCode-10",
+                              "relTypeName": "Sample-relTypeName-10",
+                              "relTypeDesc": "Sample-relTypeDesc-10"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-11",
+                              "relTypeCode": "Sample-relTypeCode-11",
+                              "relTypeName": "Sample-relTypeName-11",
+                              "relTypeDesc": "Sample-relTypeDesc-11"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-12",
+                              "relTypeCode": "Sample-relTypeCode-12",
+                              "relTypeName": "Sample-relTypeName-12",
+                              "relTypeDesc": "Sample-relTypeDesc-12"
+                  }
+        ,
+            {
+                            "relTypeId": "Sample-relTypeId-13",
+                              "relTypeCode": "Sample-relTypeCode-13",
+                              "relTypeName": "Sample-relTypeName-13",
+                              "relTypeDesc": "Sample-relTypeDesc-13"
+                  }
+          ],
+  "totalRecords": 14,
+  "lastPage": 2
+}

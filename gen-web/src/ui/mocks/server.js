@@ -51,5 +51,29 @@ app.get('/gen-web/itemattribute/:itemAttrId', (req, res) =>{
     const returnVal = jsonQuery('rows[itemAttrId=' + req.params.itemAttrId + ']',{data: itemattributes})
     return res.json(returnVal.value)
 })
+const relationshiptypes = require('./RelationshipTypes.json')
+app.get('/gen-web/relationshiptypes', (req, res) =>{
+    return res.json(relationshiptypes)
+})
+app.get('/gen-web/relationshiptype/:relTypeId', (req, res) =>{
+    const returnVal = jsonQuery('rows[relTypeId=' + req.params.relTypeId + ']',{data: relationshiptypes})
+    return res.json(returnVal.value)
+})
+const relationships = require('./Relationships.json')
+app.get('/gen-web/relationships', (req, res) =>{
+    return res.json(relationships)
+})
+app.get('/gen-web/relationship/:relId', (req, res) =>{
+    const returnVal = jsonQuery('rows[relId=' + req.params.relId + ']',{data: relationships})
+    return res.json(returnVal.value)
+})
+const relationshipmappings = require('./RelationshipMappings.json')
+app.get('/gen-web/relationshipmappings', (req, res) =>{
+    return res.json(relationshipmappings)
+})
+app.get('/gen-web/relationshipmapping/:relId', (req, res) =>{
+    const returnVal = jsonQuery('rows[relId=' + req.params.relId + ']',{data: relationshipmappings})
+    return res.json(returnVal.value)
+})
 app.listen(8000)
 console.log('Listening on port 8000')

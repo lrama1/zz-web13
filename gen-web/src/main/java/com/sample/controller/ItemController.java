@@ -69,7 +69,8 @@ public class ItemController extends BaseController {
 	public ListWrapper<Item> getAllItems(@RequestParam("page") int pageNumber, @RequestParam("per_page") int pageSize,
 			@RequestParam(value = "sort_by", required = false) String sortByAttributeName,
 			@RequestParam(value = "order", required = false) String sortDirection) {
-		return itemService.getItems(pageNumber, pageSize, sortByAttributeName, sortDirection);
+		ListWrapper<Item> items =  itemService.getItems(pageNumber, pageSize, sortByAttributeName, sortDirection);
+		return items;
 
 	}
 
