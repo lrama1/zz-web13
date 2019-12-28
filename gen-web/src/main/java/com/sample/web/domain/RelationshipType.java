@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
  */
 @Entity
 @Table(name = "RELATIONSHIP_TYPE", schema = "PUBLIC", catalog = "PUBLIC")
-@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
+//@JsonIdentityInfo(generator=ObjectIdGenerators.IntSequenceGenerator.class, property="@id")
 public class RelationshipType implements java.io.Serializable {
 
 	// Fields
@@ -30,8 +30,8 @@ public class RelationshipType implements java.io.Serializable {
 	private String relTypeCode;
 	private String relTypeName;
 	private String relTypeDesc;
-	private Set<RelationshipAttributeType> relationshipAttributeTypes = new HashSet<RelationshipAttributeType>(0);
-	private Set<Relationship> relationships = new HashSet<Relationship>(0);
+	private Set<RelationshipAttributeType> relationshipAttributeTypes = new HashSet<RelationshipAttributeType>(0);	
+	//private Set<Relationship> relationships = new HashSet<Relationship>(0);
 	private Set<ItemRelationshipRuleBase> itemRelationshipRuleBases = new HashSet<ItemRelationshipRuleBase>(0);
 
 	// Constructors
@@ -49,14 +49,14 @@ public class RelationshipType implements java.io.Serializable {
 
 	/** full constructor */
 	public RelationshipType(String relTypeId, String relTypeCode, String relTypeName, String relTypeDesc,
-			Set<RelationshipAttributeType> relationshipAttributeTypes, Set<Relationship> relationships,
+			Set<RelationshipAttributeType> relationshipAttributeTypes, /*Set<Relationship> relationships,*/
 			Set<ItemRelationshipRuleBase> itemRelationshipRuleBases) {
 		this.relTypeId = relTypeId;
 		this.relTypeCode = relTypeCode;
 		this.relTypeName = relTypeName;
 		this.relTypeDesc = relTypeDesc;
 		this.relationshipAttributeTypes = relationshipAttributeTypes;
-		this.relationships = relationships;
+		//this.relationships = relationships;
 		this.itemRelationshipRuleBases = itemRelationshipRuleBases;
 	}
 
@@ -115,8 +115,8 @@ public class RelationshipType implements java.io.Serializable {
 		this.relationshipAttributeTypes = relationshipAttributeTypes;
 	}
 
+	/*
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "relationshipType")
-
 	public Set<Relationship> getRelationships() {
 		return this.relationships;
 	}
@@ -124,6 +124,7 @@ public class RelationshipType implements java.io.Serializable {
 	public void setRelationships(Set<Relationship> relationships) {
 		this.relationships = relationships;
 	}
+	*/
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "relationshipType")
 
